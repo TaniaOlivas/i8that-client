@@ -34,7 +34,7 @@ const Signup = (props) => {
                 <FormGroup>
                     <Label htmlFor='birthday'>Birthday</Label>
                     <Input onChange={(e) => setBirthday(e.target.value)}
-                name='birthday' value={birthday} />
+                name='birthday' type='date' pattern='[0-9]{8}' value={birthday} />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor='email'>Email</Label>
