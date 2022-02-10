@@ -34,7 +34,7 @@ const Signup = (props) => {
                 <FormGroup>
                     <Label htmlFor='birthday'>Birthday</Label>
                     <Input onChange={(e) => setBirthday(e.target.value)}
-                    name='birthday' value={birthday} />
+                name='birthday' value={birthday} />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor='email'>Email</Label>
@@ -44,7 +44,7 @@ const Signup = (props) => {
                 <FormGroup>
                     <Label htmlFor='password'>Password</Label>
                     <Input onChange={(e) => setPassword(e.target.value)}
-                    name='password' value={password} />
+                    name='password' type='password' value={password} />
                 </FormGroup>
                 <Button type='submit'>Sign Up</Button>
             </Form>
