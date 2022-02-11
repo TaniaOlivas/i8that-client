@@ -4,9 +4,9 @@ import {
     Link,
     Routes
 } from "react-router-dom";
-// import auth from "Auth";
-// import login from "Login";
-// import signup from "Signup";
+// import Auth from "Auth";
+// import Login from "Login";
+// import Signup from "Signup";
 
 const Navbar=(props) =>{
   return (
@@ -16,13 +16,16 @@ const Navbar=(props) =>{
                 <ul>
                 {/* <li><Link to="/">Login</Link></li> */}
                 {/* <li><Link to="/">Signup</Link></li> */}
+                {/* <li><Link to="/">Logout</Link></li> */}
                 </ul>
         </div>
         <div>
                 <Routes>
-                    {/* <Route exact path="/login" element={<Login/>}></Route> */}
-                    {/* <Route exact path="/signup" element={<Signup/>}></Route> */}
+                    {/* <Route exact path="/Login" element={<Login/>}></Route> */}
+                    {/* <Route exact path="/Signup" element={<Signup/>}></Route> */}
+                    {/* <Route exact path="/Logout" element={<Logout/>}></Route> */}
                 </Routes>
+              
         </div>
     </div>
   );
