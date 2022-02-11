@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import FoodIndex from './components/Food/FoodIndex';
 import Navbar from './components/Navbar';
 import Auth from './components/auth/Auth';
 
@@ -31,6 +32,7 @@ function App() {
        {/* <Navbar clearToken={clearToken} />
        {protectedViews()} */}
        <Auth updateToken={updateToken}/>
+       <FoodIndex />
     </div>
   );
 }
