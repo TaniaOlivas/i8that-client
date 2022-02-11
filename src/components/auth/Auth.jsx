@@ -13,9 +13,9 @@ const Auth = (props) => {
         <div>
             <h1>Hello from Signup/Login</h1>
         {isLoginVisible === true ? (
-            <Login updateLocalStorage={props.updateLocalStorage}/> 
+            <Login updateLocalStorage={props.updateLocalStorage} updateToken={props.updateToken}/> 
         ) : (
-            <Signup updateLocalStorage={props.updateLocalStorage}/>
+            <Signup updateLocalStorage={props.updateLocalStorage} updateToken={props.updateToken}/>
         )}
         <br />
         <button onClick={(handleToggle)}>Toggle Signup/Login</button>
