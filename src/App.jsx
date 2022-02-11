@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
 import Auth from './components/auth/Auth';
 
 function App() {
