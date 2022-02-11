@@ -11,7 +11,7 @@ const Signup = (props) => {
         event.preventDefault();
         fetch('http://localhost:4000/user/register', {
             method: 'POST',
-            body: JSON.stringify({user: {name: name, birthday: birthday, email: email, password: password}}),
+            body: JSON.stringify({name: name, birthday: birthday, email: email, password: password}),
             headers: new Headers({
                 'Content-Type': 'application/json'
             })
@@ -34,7 +34,7 @@ const Signup = (props) => {
                 <FormGroup>
                     <Label htmlFor='birthday'>Birthday</Label>
                     <Input onChange={(e) => setBirthday(e.target.value)}
-                    name='birthday' value={birthday} />
+                name='birthday' type='date' pattern='[0-9]{8}' value={birthday} />
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor='email'>Email</Label>
@@ -44,7 +44,7 @@ const Signup = (props) => {
                 <FormGroup>
                     <Label htmlFor='password'>Password</Label>
                     <Input onChange={(e) => setPassword(e.target.value)}
-                    name='password' value={password} />
+                    name='password' type='password' value={password} />
                 </FormGroup>
                 <Button type='submit'>Sign Up</Button>
             </Form>
