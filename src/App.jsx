@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
+  const [refreshUserTable, setRefreshUserTable] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
@@ -28,7 +29,11 @@ function App() {
     return sessionToken === localStorage.getItem('token') ? (
       <FoodIndex token={sessionToken} />
     ) : (
-      <Auth updateToken={updateToken} />
+      <Auth
+        updateToken={updateToken}
+        refreshUserTable={refreshUserTable}
+        setRefreshUserTable={setRefreshUserTable}
+      />
     );
   };
 
@@ -40,6 +45,8 @@ function App() {
           updateToken={updateToken}
           token={sessionToken}
           protectedViews={protectedViews}
+          refreshUserTable={refreshUserTable}
+          setRefreshUserTable={setRefreshUserTable}
         />
         {/* {protectedViews()} */}
         {/* <FoodIndex token={sessionToken} /> */}
