@@ -11,7 +11,7 @@ const FoodEdit = (props) => {
 
     const foodUpdate = (event, food) => {
         event.preventDefault();
-        fetch(`http:localhost:4000/log/${props.foodToUpdate.id}`, {
+        fetch(`http:localhost:4000/foodlog/${props.foodToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({log: {date: editDate, food: editFood, location: editLocation, mood: editMood, calories: editCalories, photo: editPhoto}}),
             headers: new Headers({
@@ -19,13 +19,14 @@ const FoodEdit = (props) => {
                 'Authorization': `${props.token}`
             })
         }).then((res) => {
-            props.setRefreshFoodTable();
+            props.fetchFood();
             props.updateOff();
         })
     }
 
     return (
         <Modal isOpen={true}>
+            <ModalHeader>Log your food</ModalHeader>
             <ModalBody>
                 <Form onSubmit={foodUpdate}>
                     <FormGroup>
