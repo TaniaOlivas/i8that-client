@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FoodCreate from './FoodCreate/FoodCreate';
+import FoodEdit from './FoodEdit/FoodEdit';
 
 const FoodIndex = (props) => {
   const [refreshFoodTable, setRefreshFoodTable] = useState(true);
@@ -10,6 +11,7 @@ const FoodIndex = (props) => {
         refreshFoodTable={refreshFoodTable}
         setRefreshFoodTable={setRefreshFoodTable}
       />
+      <FoodEdit />
     </div>
   );
 };
