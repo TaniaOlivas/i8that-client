@@ -1,27 +1,17 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-// import Navbar from './components/Navbar';
-import FoodTable from './components/FoodTable';
-=======
 import FoodIndex from './components/Food/FoodIndex';
 import Auth from './components/auth/Auth';
 import Header from './components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
->>>>>>> 3be5e68eee11aae03e287987a110fac8f198238c
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
 
-<<<<<<< HEAD
-  {/* <Navbar /> */}
-  <FoodTable />
-=======
   useEffect(() => {
     if (localStorage.getItem('token')) {
       setSessionToken(localStorage.getItem('token'));
     }
   }, []);
->>>>>>> 3be5e68eee11aae03e287987a110fac8f198238c
 
   const updateToken = (newToken) => {
     localStorage.setItem('token', newToken);
