@@ -68,36 +68,77 @@ const FoodCreate = (props) => {
             onChange={(e) => setLocation(e.target.value)}
           />
         </FormGroup>
-        <FormGroup check inline>
-          <Input name="mood" type="checkbox" />
+        <FormGroup>
+          <Label htmlFor="mood" />
+          <Input
+            type="select"
+            name="mood"
+            placeholder="Mood"
+            value={mood}
+            onChange={(e) => setMood(e.target.value)}
+          >
+            <option value="Happy">Happy</option>
+            <option value="Sad">Sad</option>
+            <option value="Indifferent">Indifferent</option>
+            <option value="Tired">Tired</option>
+            <option value="Energized">Energized</option>
+          </Input>
+        </FormGroup>
+        {/* <FormGroup check inline>
+          <Input
+            name="mood"
+            type="checkbox"
+            value={mood}
+            onChange={(e) => setMood(e.target.value)}
+          />
           <Label htmlFor="mood" check>
             Happy
           </Label>
         </FormGroup>
         <FormGroup check inline>
-          <Input name="mood" type="checkbox" />
+          <Input
+            name="mood"
+            type="checkbox"
+            value={mood}
+            onChange={(e) => setMood(e.target.value)}
+          />
           <Label htmlFor="mood" check>
             Sad
           </Label>
         </FormGroup>
         <FormGroup check inline>
-          <Input name="mood" type="checkbox" />
+          <Input
+            name="mood"
+            type="checkbox"
+            value={mood}
+            onChange={(e) => setMood(e.target.value)}
+          />
           <Label htmlFor="mood" check>
             Tired
           </Label>
         </FormGroup>
         <FormGroup check inline>
-          <Input name="mood" type="checkbox" />
+          <Input
+            name="mood"
+            type="checkbox"
+            value={mood}
+            onChange={(e) => setMood(e.target.value)}
+          />
           <Label htmlFor="mood" check>
             Energized
           </Label>
         </FormGroup>
         <FormGroup check inline>
-          <Input name="mood" type="checkbox" />
+          <Input
+            name="mood"
+            type="checkbox"
+            value={mood}
+            onChange={(e) => setMood(e.target.value)}
+          />
           <Label htmlFor="mood" check>
             Indifferent
           </Label>
-        </FormGroup>
+        </FormGroup> */}
         <FormGroup>
           <Label htmlFor="calories" />
           <Input

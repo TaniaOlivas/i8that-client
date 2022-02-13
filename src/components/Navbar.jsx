@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Route, Link, Routes, NavLink } from 'react-router-dom';
-import { Nav, Navbar, NavbarBrand, NavItem } from 'reactstrap';
+import React from 'react';
+import { Route, Routes, NavLink } from 'react-router-dom';
+import { Nav, Navbar, NavItem } from 'reactstrap';
+import UserIndex from './users/UserIndex';
 
 const Header = (props) => {
   return (
@@ -11,6 +12,8 @@ const Header = (props) => {
           <NavItem>
             <div>
               <NavLink to="/auth">Login/Signup</NavLink>
+              <br />
+              <NavLink to="/users">Admin</NavLink>
             </div>
             <div>
               <Routes>
@@ -18,6 +21,16 @@ const Header = (props) => {
                   exact
                   path="/auth"
                   element={props.protectedViews()}
+                ></Route>
+                <Route
+                  exact
+                  path="/users"
+                  element={
+                    <UserIndex
+                      token={props.sessionToken}
+                      refreshUserTable={props.refreshUserTable}
+                    />
+                  }
                 ></Route>
               </Routes>
             </div>
