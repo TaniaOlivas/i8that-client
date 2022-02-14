@@ -9,11 +9,11 @@ const FoodEdit = (props) => {
     const [editCalories, setEditCalories] = useState(props.foodToUpdate.calories);
     const [editPhoto, setEditPhoto] = useState(props.foodToUpdate.photo);
 
-    const foodUpdate = (event, food) => {
+    const foodUpdate = (event, foodEntry) => {
         event.preventDefault();
-        fetch(`http:localhost:4000/foodlog/${props.foodToUpdate.id}`, {
+        fetch(`http://localhost:4000/foodlog/${props.foodToUpdate.id}`, {
             method: 'PUT',
-            body: JSON.stringify({log: {date: editDate, food: editFood, location: editLocation, mood: editMood, calories: editCalories, photo: editPhoto}}),
+            body: JSON.stringify({date: editDate, food: editFood, location: editLocation, mood: editMood, calories: editCalories, photo: editPhoto}),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
