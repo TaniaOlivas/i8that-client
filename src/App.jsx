@@ -3,6 +3,7 @@ import FoodIndex from './components/Food/FoodIndex';
 import Auth from './components/auth/Auth';
 import Header from './components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
+import FoodTable from './components/Food/FoodTable/FoodTable';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');

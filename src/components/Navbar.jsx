@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes, NavLink } from 'react-router-dom';
-import { Nav, Navbar, NavItem } from 'reactstrap';
+import { Button, Nav, Navbar, NavItem } from 'reactstrap';
 import UserIndex from './users/UserIndex';
 
 const Header = (props) => {
@@ -15,6 +15,7 @@ const Header = (props) => {
               <br />
               <NavLink to="/users">Admin</NavLink>
             </div>
+            <Button onClick={props.clearToken}>Log Out</Button>
             <div>
               <Routes>
                 <Route
