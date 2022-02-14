@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {Table, Button, Container, Row, Col} from "reactstrap";
 
 
+
 const FoodTable = (props) => {
+  
     const deleteFoodEntry = (foodEntry) => {
     fetch(`http://localhost:4000/foodlog/${foodEntry.id}`, {
             method: "DELETE",
