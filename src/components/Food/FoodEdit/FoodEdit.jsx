@@ -16,7 +16,7 @@ const FoodEdit = (props) => {
             body: JSON.stringify({log: {date: editDate, food: editFood, location: editLocation, mood: editMood, calories: editCalories, photo: editPhoto}}),
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': `${props.token}`
+                'Authorization': props.token
             })
         }).then((res) => {
             props.fetchFood();

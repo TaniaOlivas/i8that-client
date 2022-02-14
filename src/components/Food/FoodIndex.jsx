@@ -15,7 +15,7 @@ const FoodIndex = (props) => {
       method: 'GET',
       headers: new Headers ({
         'Content-Type': 'application/json',
-        'Authorization': `${props.token}`
+        'Authorization': props.token
       })
     }).then((res) => res.json())
     .then((logData) => {
