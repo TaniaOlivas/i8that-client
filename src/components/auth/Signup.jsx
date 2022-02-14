@@ -56,6 +56,8 @@ const Signup = (props) => {
             onChange={(e) => setEmail(e.target.value)}
             name="email"
             value={email}
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+            type="email"
           />
         </FormGroup>
         <FormGroup>
@@ -65,6 +67,7 @@ const Signup = (props) => {
             name="password"
             type="password"
             value={password}
+            minLength="5"
           />
         </FormGroup>
         <Button type="submit">Sign Up</Button>
