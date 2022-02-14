@@ -47,9 +47,6 @@ const updateOff = () => {
             setRefreshFoodTable={setRefreshFoodTable}
       />
       </Col>
-      <Col md='3'>
-        <FoodTable food={food} editUpdateFood={editUpdateFood} updateOn={updateOn} fetchFood={fetchFood} token={props.token} />
-      </Col>
         {updateActive ? <FoodEdit foodToUpdate={foodToUpdate} updateOff={updateOff} token={props.token} fetchFood={fetchFood}/> : <></>}
       </Row>
     </Container>
