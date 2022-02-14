@@ -29,6 +29,7 @@ const FoodTable = (props) => {
                     <td>{foodEntry.calories}</td>
                     <td>{foodEntry.photo}</td>
                     <td><Button onClick={() => { deleteFoodEntry (foodEntry)}}>Delete</Button> </td>
+                    <td><Button onClick={() => { props.editUpdateFood (foodEntry); props.updateOn() }}>Edit</Button></td>
                     
                 </tr>
             )
