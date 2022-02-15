@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Button, Form, FormGroup, Input, Label, Container } from 'reactstrap';
+import ImageUpload from '../ImageUpload';
 
 const FoodCreate = (props) => {
   const [date, setDate] = useState('');
@@ -36,131 +37,69 @@ const FoodCreate = (props) => {
 
   return (
     <div>
-      <h3>Log your food!</h3>
-      <Form onSubmit={handleSubmit}>
-        <FormGroup>
-          <Label htmlFor="date" />
-          <Input
-            type="date"
-            name="date"
-            pattern="[0-9]{8}"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor="food" />
-          <Input
-            type="text"
-            name="food"
-            placeholder="Food"
-            value={food}
-            onChange={(e) => setFood(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor="location" />
-          <Input
-            type="text"
-            name="location"
-            placeholder="Location"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor="mood" />
-          <Input
-            type="select"
-            name="mood"
-            placeholder="Mood"
-            value={mood}
-            onChange={(e) => setMood(e.target.value)}
-          >
-            <option value="Happy">Happy</option>
-            <option value="Sad">Sad</option>
-            <option value="Indifferent">Indifferent</option>
-            <option value="Tired">Tired</option>
-            <option value="Energized">Energized</option>
-          </Input>
-        </FormGroup>
-        {/* <FormGroup check inline>
-          <Input
-            name="mood"
-            type="checkbox"
-            value={mood}
-            onChange={(e) => setMood(e.target.value)}
-          />
-          <Label htmlFor="mood" check>
-            Happy
-          </Label>
-        </FormGroup>
-        <FormGroup check inline>
-          <Input
-            name="mood"
-            type="checkbox"
-            value={mood}
-            onChange={(e) => setMood(e.target.value)}
-          />
-          <Label htmlFor="mood" check>
-            Sad
-          </Label>
-        </FormGroup>
-        <FormGroup check inline>
-          <Input
-            name="mood"
-            type="checkbox"
-            value={mood}
-            onChange={(e) => setMood(e.target.value)}
-          />
-          <Label htmlFor="mood" check>
-            Tired
-          </Label>
-        </FormGroup>
-        <FormGroup check inline>
-          <Input
-            name="mood"
-            type="checkbox"
-            value={mood}
-            onChange={(e) => setMood(e.target.value)}
-          />
-          <Label htmlFor="mood" check>
-            Energized
-          </Label>
-        </FormGroup>
-        <FormGroup check inline>
-          <Input
-            name="mood"
-            type="checkbox"
-            value={mood}
-            onChange={(e) => setMood(e.target.value)}
-          />
-          <Label htmlFor="mood" check>
-            Indifferent
-          </Label>
-        </FormGroup> */}
-        <FormGroup>
-          <Label htmlFor="calories" />
-          <Input
-            type="text"
-            name="calories"
-            placeholder="Calories"
-            value={calories}
-            onChange={(e) => setCalories(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor="photo" />
-          <Input
-            type="text"
-            name="photo"
-            placeholder="Photo URL"
-            value={photo}
-            onChange={(e) => setPhoto(e.target.value)}
-          />
-        </FormGroup>
-        <Button type="submit">Submit</Button>
-      </Form>
+      <Container>
+        <h3>Log your food!</h3>
+        <Form onSubmit={handleSubmit}>
+          <FormGroup>
+            <Label htmlFor="date" />
+            <Input
+              type="date"
+              name="date"
+              pattern="[0-9]{8}"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="food" />
+            <Input
+              type="text"
+              name="food"
+              placeholder="Food"
+              value={food}
+              onChange={(e) => setFood(e.target.value)}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="location" />
+            <Input
+              type="text"
+              name="location"
+              placeholder="Location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="mood" />
+            <Input
+              type="select"
+              name="mood"
+              placeholder="Mood"
+              value={mood}
+              onChange={(e) => setMood(e.target.value)}
+            >
+              <option value="Happy">Happy</option>
+              <option value="Sad">Sad</option>
+              <option value="Indifferent">Indifferent</option>
+              <option value="Tired">Tired</option>
+              <option value="Energized">Energized</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="calories" />
+            <Input
+              type="text"
+              name="calories"
+              placeholder="Calories"
+              value={calories}
+              onChange={(e) => setCalories(e.target.value)}
+            />
+          </FormGroup>
+          <ImageUpload token={props.token} setPhoto={setPhoto} photo={photo} />
+          <Button type="submit">Submit</Button>
+        </Form>
+      </Container>
     </div>
   );
 };

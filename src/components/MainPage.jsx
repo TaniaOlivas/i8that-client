@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import FoodIndex from './Food/FoodIndex';
 import UserIndex from './users/UserIndex';
+
 const MainPage = (props) => {
   return (
     <div>
