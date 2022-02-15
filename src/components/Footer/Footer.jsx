@@ -12,7 +12,7 @@ import orangeSurf from '../../assets/orangeSurf.jpg';
 
 const Footer = () => {
     return(
-        <footer>
+        <footer className='footer'>
             <Row>
                 <img src={orangeBarbell} className="footerImg" alt="Orange with barbell" />
                 <img src={orangeBoxing} className="footerImg" alt="Orange boxing" />
