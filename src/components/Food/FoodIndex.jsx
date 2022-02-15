@@ -26,6 +26,13 @@ const FoodIndex = (props) => {
       });
   };
 
+  const changeViewBtn = (e) => {
+    e.target.style.background = '#54626F'
+  }
+  const changeViewBtnOff = (e) => {
+    e.target.style.background = 'grey'
+  }
+
   const editUpdateFood = (foodEntry) => {
     setFoodToUpdate(foodEntry);
     console.log(foodEntry);
@@ -78,7 +85,9 @@ const FoodIndex = (props) => {
       ) : (
         <></>
       )}
-      <Button onClick={handleToggle}>View your Logs!</Button>
+      <div style={{borderWidth: 0, textAlign: "center", marginTop: 50}}>
+      <Button onMouseEnter={changeViewBtn} onMouseLeave={changeViewBtnOff} classID="viewLogs" onClick={handleToggle}>View your Logs!</Button>
+      </div>
     </div>
   );
 };

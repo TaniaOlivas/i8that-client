@@ -14,6 +14,7 @@ const Footer = () => {
     return(
         <footer className='footer'>
             <Row>
+                <div style={{textAlign: "center", marginTop: 150}}>
                 <img src={orangeBarbell} className="footerImg" alt="Orange with barbell" />
                 <img src={orangeBoxing} className="footerImg" alt="Orange boxing" />
                 <img src={orangeDumbbell} className="footerImg" alt="Orange with dumbbells" />
@@ -22,6 +23,7 @@ const Footer = () => {
                 <img src={orangeJuice} className="footerImg" alt="Orange holding juice" />
                 <img src={orangeSmile} className="footerImg" alt="Smiling orange" />
                 <img src={orangeSurf} className="footerImg" alt="Orange with surfboard" />
+                </div>
             </Row>
         </footer>
     );
