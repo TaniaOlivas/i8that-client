@@ -5,6 +5,7 @@ import Header from './components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
 import FoodTable from './components/Food/FoodTable/FoodTable';
 import MainPage from './components/MainPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -52,6 +53,7 @@ function App() {
         />
         {protectedViews()}
         {/* <FoodIndex token={sessionToken} /> */}
+        <Footer/>
       </Router>
     </div>
   );
