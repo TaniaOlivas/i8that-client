@@ -70,7 +70,7 @@ const FoodTable = (props) => {
   return (
     <div style={{textAlign: 'center'}}>
       <Container><h1>Food Entries</h1>
-      <Table striped>
+      <Table hover>
         <thead >
           <tr className='FoodTable'>
             <th>Date</th>
