@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Button } from 'reactstrap';
 import FoodCreate from './FoodCreate/FoodCreate';
 import FoodEdit from './FoodEdit/FoodEdit';
 import FoodTable from './FoodTable/FoodTable';
@@ -9,64 +9,76 @@ const FoodIndex = (props) => {
   const [updateActive, setUpdateActive] = useState(false);
   const [refreshFoodTable, setRefreshFoodTable] = useState(true);
   const [foodToUpdate, setFoodToUpdate] = useState({});
+  const [isTableVisible, setIsTableVisible] = useState(true);
 
   const fetchFood = () => {
-    fetch('http://localhost:4000/foodlog/all', {
+    fetch('http://localhost:4000/foodlog/mine', {
       method: 'GET',
-      headers: new Headers ({
+      headers: new Headers({
         'Content-Type': 'application/json',
-        'Authorization': props.token
-      })
-    }).then((res) => res.json())
-    .then((logData) => {
-      setFoodEntrys(logData)
-      console.log(logData)
+        Authorization: props.token,
+      }),
     })
-  }
+      .then((res) => res.json())
+      .then((logData) => {
+        setFoodEntrys(logData);
+        console.log(logData);
+      });
+  };
 
   const editUpdateFood = (foodEntry) => {
     setFoodToUpdate(foodEntry);
     console.log(foodEntry);
-  }
+  };
 
   const updateOn = () => {
     setUpdateActive(true);
-}
- 
-const updateOff = () => {
-   setUpdateActive(false);
-}
+  };
 
-useEffect(() => {
-  fetchFood()
-}, []);
+  const updateOff = () => {
+    setUpdateActive(false);
+  };
+
+  useEffect(() => {
+    fetchFood();
+  }, [refreshFoodTable]);
+
+  function handleToggle() {
+    setIsTableVisible(!isTableVisible);
+  }
 
   return (
     <div>
-    <Container>
-      <Row>
-        <Col md='3'>
-          <FoodCreate
-            token={props.token}
-            refreshFoodTable={refreshFoodTable}
-            setRefreshFoodTable={setRefreshFoodTable}
-      />
-      </Col>
-        {updateActive ? <FoodEdit foodToUpdate={foodToUpdate} updateOff={updateOff} token={props.token} fetchFood={fetchFood}/> : <></>}
-      </Row>
-
-      <FoodTable
-        token={props.token}
-        refreshFoodTable={refreshFoodTable}
-        setRefreshFoodTable={setRefreshFoodTable}
-        fetchFood={fetchFood}
-        foodEntrys={foodEntrys}
-        setFoodEntrys={setFoodEntrys}
-        editUpdateFood={editUpdateFood} 
-        updateOn={updateOn}
-        
+      {isTableVisible === true ? (
+        <FoodCreate
+          token={props.token}
+          refreshFoodTable={refreshFoodTable}
+          setRefreshFoodTable={setRefreshFoodTable}
         />
-        </Container>
+      ) : (
+        <FoodTable
+          token={props.token}
+          refreshFoodTable={refreshFoodTable}
+          setRefreshFoodTable={setRefreshFoodTable}
+          fetchFood={fetchFood}
+          foodEntrys={foodEntrys}
+          setFoodEntrys={setFoodEntrys}
+          editUpdateFood={editUpdateFood}
+          updateOn={updateOn}
+        />
+      )}
+
+      {updateActive ? (
+        <FoodEdit
+          foodToUpdate={foodToUpdate}
+          updateOff={updateOff}
+          token={props.token}
+          fetchFood={fetchFood}
+        />
+      ) : (
+        <></>
+      )}
+      <Button onClick={handleToggle}>View your Logs!</Button>
     </div>
   );
 };
