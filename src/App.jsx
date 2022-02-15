@@ -4,6 +4,7 @@ import Auth from './components/auth/Auth';
 import Header from './components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
 import FoodTable from './components/Food/FoodTable/FoodTable';
+import MainPage from './components/MainPage';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -28,7 +29,7 @@ function App() {
 
   const protectedViews = () => {
     return sessionToken === localStorage.getItem('token') ? (
-      <FoodIndex token={sessionToken} />
+      <MainPage token={sessionToken} />
     ) : (
       <Auth
         updateToken={updateToken}
@@ -43,13 +44,13 @@ function App() {
       <Router>
         <Header
           clearToken={clearToken}
-          updateToken={updateToken}
-          token={sessionToken}
+          // updateToken={updateToken}
+          // token={sessionToken}
           protectedViews={protectedViews}
-          refreshUserTable={refreshUserTable}
-          setRefreshUserTable={setRefreshUserTable}
+          // refreshUserTable={refreshUserTable}
+          // setRefreshUserTable={setRefreshUserTable}
         />
-        {/* {protectedViews()} */}
+        {protectedViews()}
         {/* <FoodIndex token={sessionToken} /> */}
       </Router>
     </div>

@@ -12,11 +12,11 @@ const Header = (props) => {
           <NavItem>
             <div>
               <NavLink to="/auth">Login/Signup</NavLink>
-              <br />
-              <NavLink to="/users">Admin</NavLink>
+              {/* <br />
+              <NavLink to="/users">Admin</NavLink> */}
             </div>
             <Button onClick={props.clearToken}>Log Out</Button>
-            <div>
+            {/* <div>
               <Routes>
                 <Route
                   exact
@@ -34,7 +34,7 @@ const Header = (props) => {
                   }
                 ></Route>
               </Routes>
-            </div>
+            </div> */}
           </NavItem>
         </Nav>
       </Navbar>
