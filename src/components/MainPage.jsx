@@ -8,7 +8,7 @@ const MainPage = (props) => {
   return (
     <div>
       <header className="secondHeader">
-        <Navbar style={{paddingTop: 0}}>
+        <Navbar style={{paddingTop: 0, marginLeft: "20px"}} >
           <Nav navbar className='ms-auto' style={{textAlign: 'right'}}>
             <NavItem>
               <NavLink style={{ textDecoration: 'none', color: 'black' }} to="/users">Admin Only</NavLink>

@@ -8,9 +8,9 @@ import {
 
 const Header = (props) => {
   return (
-    <div className='topNav'>
-      <header>
-        <Navbar color="faded" className="header" style={{paddingBottom: 0}}>
+    <>
+
+        <Navbar className="navbar-light" style={{paddingBottom: 0, backgroundColor: "transparent", marginLeft: 20, paddinLeft: 20}}>
           <Nav navbar className='ms-auto'>
             <NavItem>
               <NavLink style={{paddingBottom: 0}} onClick={props.clearToken}>Logout</NavLink>
@@ -23,8 +23,8 @@ const Header = (props) => {
             </Dropdown> */}
           </Nav>
         </Navbar>
-      </header>
-    </div>
+      {/* //</div></header> */}
+  </>
   );
 };
 
