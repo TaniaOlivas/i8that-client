@@ -53,3 +53,8 @@ body {
   width: 150px;
   border-radius: 5;
 }
+
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    color: black !important;
+  }

@@ -17,7 +17,7 @@ const Header = (props) => {
     <div>
       <header>
         <Navbar color="faded" className="header">
-          <Nav navbar>
+          <Nav navbar className='ms-auto'>
             <NavItem>
               <NavLink onClick={props.clearToken}>Logout</NavLink>
             </NavItem>
