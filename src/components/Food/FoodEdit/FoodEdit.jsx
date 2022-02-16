@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormGroup, ModalBody, Modal, Form, Input, Label, Button, ModalHeader, ModalFooter, ModalTitle, Container } from 'reactstrap';
+import { FormGroup, ModalBody, Modal, Form, Input, Label, Button, ModalHeader, ModalFooter, Container } from 'reactstrap';
 
 
 const FoodEdit = (props) => {
@@ -30,7 +30,7 @@ const FoodEdit = (props) => {
     return (
         <Modal isOpen={true}>
             <Container>
-            <ModalHeader closeButton>
+            <ModalHeader>
                 <h2 style={{textAlign: 'center'}}>Log your food</h2>
                 </ModalHeader>
             <ModalBody>
@@ -60,11 +60,10 @@ const FoodEdit = (props) => {
                         <Input name='photo' value={editPhoto} onChange={(e) => setEditPhoto(e.target.value)}/>
                     </FormGroup>
                     <ModalFooter>
-                        <Container style={{textAlign: 'center'}}>
-                    <Button type='submit'>Update food entry</Button>
-                    <br />
-                    <Button style={{paddingTop: 10}}>Close</Button>
-                        </Container>
+                        <FormGroup inline>
+                            <Button type='submit' inline>Update food entry</Button>
+                            <Button inline>Close</Button>
+                        </FormGroup>
                     </ModalFooter>
                 </Form>
             </ModalBody>

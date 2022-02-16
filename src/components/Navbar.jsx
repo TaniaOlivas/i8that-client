@@ -1,20 +1,14 @@
 import React from 'react';
 import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
   Nav,
   Navbar,
-  NavbarBrand,
   NavItem,
   NavLink,
 } from 'reactstrap';
 
 const Header = (props) => {
   return (
-    <div>
+    <div className='topNav'>
       <header>
         <Navbar color="faded" className="header" style={{paddingBottom: 0}}>
           <Nav navbar className='ms-auto'>
