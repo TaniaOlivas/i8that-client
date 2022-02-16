@@ -53,7 +53,7 @@ const FoodCreate = (props) => {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <Container style={{ width: '50%' }}>
+      <Container style={{ width: '30%' }}>
         <h2>Log Food</h2>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
