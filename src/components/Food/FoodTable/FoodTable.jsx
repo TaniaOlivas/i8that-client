@@ -71,9 +71,9 @@ const FoodTable = (props) => {
   return (
 
     <div style={{textAlign: 'center'}}>
-      <Container><div><h1>Food Entries</h1></div>
+      <Container style={{width: '50%'}}><div><h1>Food Entries</h1></div>
       <div>
-      <Table hover>
+      <Table hover style={{backgroundColor: 'white', borderRadius: 20 }}>
         <thead >
           <tr className='FoodTable'>
             <th>Date</th>
