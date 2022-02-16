@@ -16,7 +16,7 @@ const Header = (props) => {
               <NavLink to="/users">Admin</NavLink> */}
             </div>
             <Button onClick={props.clearToken}>Log Out</Button>
-            
+
             {/* <div>
               <Routes>
                 <Route
