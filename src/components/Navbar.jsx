@@ -15,9 +15,6 @@ import {
 const Header = (props) => {
   return (
     <div>
-      <header className="picture">
-        <h1>i8that</h1>
-      </header>
       <header>
         <Navbar color="faded" className="header">
           <Nav navbar>

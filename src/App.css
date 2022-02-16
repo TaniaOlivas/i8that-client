@@ -2,7 +2,7 @@
 .header {
   margin-top: 0px !important;
   text-align: center;
-  background-color: #f99f3e;
+  background-color: white;
   color: #28446d;
 }
 
@@ -26,6 +26,10 @@ header h1 {
 
 header button {
   color: white;
+}
+
+.secondHeader {
+  background-color: #f99f3e;
 }
 
 /*  Body  */
