@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormGroup, ModalBody, Modal, Form, Input, Label, Button, ModalHeader, ModalFooter } from 'reactstrap';
+import { FormGroup, ModalBody, Modal, Form, Input, Label, Button, ModalHeader, ModalFooter, ModalTitle, Container } from 'reactstrap';
 
 
 const FoodEdit = (props) => {
@@ -10,7 +10,9 @@ const FoodEdit = (props) => {
     const [editCalories, setEditCalories] = useState(props.foodToUpdate.calories);
     const [editPhoto, setEditPhoto] = useState(props.foodToUpdate.photo);
 
+
     const foodUpdate = (event, foodEntry) => {
+
         event.preventDefault();
         fetch(`http://localhost:4000/foodlog/${props.foodToUpdate.id}`, {
             method: 'PUT',
@@ -27,7 +29,10 @@ const FoodEdit = (props) => {
 
     return (
         <Modal isOpen={true}>
-            <ModalHeader>Log your food</ModalHeader>
+            <Container>
+            <ModalHeader closeButton>
+                <h2 style={{textAlign: 'center'}}>Log your food</h2>
+                </ModalHeader>
             <ModalBody>
                 <Form onSubmit={foodUpdate}>
                     <FormGroup>
@@ -54,9 +59,16 @@ const FoodEdit = (props) => {
                         <Label htmlFor='photo'>Edit Photo:</Label>
                         <Input name='photo' value={editPhoto} onChange={(e) => setEditPhoto(e.target.value)}/>
                     </FormGroup>
+                    <ModalFooter>
+                        <Container style={{textAlign: 'center'}}>
                     <Button type='submit'>Update food entry</Button>
+                    <br />
+                    <Button style={{paddingTop: 10}}>Close</Button>
+                        </Container>
+                    </ModalFooter>
                 </Form>
             </ModalBody>
+            </Container>
         </Modal>
     );
 }
