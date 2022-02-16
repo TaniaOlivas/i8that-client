@@ -72,7 +72,7 @@ const FoodTable = (props) => {
 
     <div style={{textAlign: 'center'}}>
       <Container style={{width: '50%'}}>
-        <div><h1>Food Entries</h1></div>
+        <div><h2>Food Entries</h2></div>
       <div>
       <Table hover style={{backgroundColor: 'white', borderRadius: 20 }}>
         <thead >
