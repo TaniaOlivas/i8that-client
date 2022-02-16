@@ -27,7 +27,7 @@ const Auth = (props) => {
       )}
       <br />
       <div style={{textAlign: 'center'}}>
-      <Button onClick={handleToggle}>Toggle Signup/Login</Button>
+      <Button onClick={handleToggle}>Signup/Login</Button>
       </div>
     </div>
   );
