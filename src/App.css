@@ -53,3 +53,8 @@ body {
   width: 150px;
   border-radius: 5;
 }
+
+
+.navitemlink {
+    text-align: right;
+}

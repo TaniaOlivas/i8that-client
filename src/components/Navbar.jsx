@@ -11,6 +11,7 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import logo from "../assets/orangelogo.png"
 
 const Header = (props) => {
   return (
@@ -18,9 +19,10 @@ const Header = (props) => {
       <header>
         <Navbar color="faded" className="header">
           <Nav navbar>
-            <NavItem>
+            <NavItem className='navitemlink'>
               <NavLink onClick={props.clearToken}>Logout</NavLink>
             </NavItem>
+            <img src= { logo } style={{ width: "70%", height: "70%"}} />
             {/* <Dropdown nav>
               <DropdownToggle caret nav></DropdownToggle>
               <DropdownMenu>
