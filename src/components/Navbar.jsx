@@ -1,45 +1,39 @@
 import React from 'react';
-import { Route, Routes, NavLink } from 'react-router-dom';
-import { Button, Nav, Navbar, NavItem } from 'reactstrap';
-import UserIndex from './users/UserIndex';
+import {
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavItem,
+  NavLink,
+} from 'reactstrap';
 
 const Header = (props) => {
   return (
-    <header>
-      <Navbar>
-        {/* <NavbarBrand>i8that</NavbarBrand> */}
-        <Nav navbar>
-          <NavItem>
-            <div>
-              <NavLink to="/auth">Login/Signup</NavLink>
-              {/* <br />
-              <NavLink to="/users">Admin</NavLink> */}
-            </div>
-            <Button onClick={props.clearToken}>Log Out</Button>
-
-            {/* <div>
-              <Routes>
-                <Route
-                  exact
-                  path="/auth"
-                  element={props.protectedViews()}
-                ></Route>
-                <Route
-                  exact
-                  path="/users"
-                  element={
-                    <UserIndex
-                      token={props.sessionToken}
-                      refreshUserTable={props.refreshUserTable}
-                    />
-                  }
-                ></Route>
-              </Routes>
-            </div> */}
-          </NavItem>
-        </Nav>
-      </Navbar>
-    </header>
+    <div>
+      <header className="picture">
+        <h1>i8that</h1>
+      </header>
+      <header>
+        <Navbar color="faded" className="header">
+          <Nav navbar>
+            <NavItem>
+              <NavLink onClick={props.clearToken}>Logout</NavLink>
+            </NavItem>
+            {/* <Dropdown nav>
+              <DropdownToggle caret nav></DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Log Food</DropdownItem>
+              </DropdownMenu>
+            </Dropdown> */}
+          </Nav>
+        </Navbar>
+      </header>
+    </div>
   );
 };
 

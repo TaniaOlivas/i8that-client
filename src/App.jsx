@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import FoodIndex from './components/Food/FoodIndex';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
 import Auth from './components/auth/Auth';
 import Header from './components/Navbar';
-import { BrowserRouter as Router } from 'react-router-dom';
-import FoodTable from './components/Food/FoodTable/FoodTable';
 import MainPage from './components/MainPage';
 import Footer from './components/Footer/Footer';
 
