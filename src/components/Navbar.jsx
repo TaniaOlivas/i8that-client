@@ -11,7 +11,7 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-import logo from "../assets/orangelogo.png"
+import logo from "../assets/orangelogolight.png"
 
 const Header = (props) => {
   return (
