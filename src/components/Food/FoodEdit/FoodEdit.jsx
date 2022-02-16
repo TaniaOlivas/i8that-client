@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FormGroup, ModalBody, Modal, Form, Input, Label, Button, ModalHeader } from 'reactstrap';
+import { FormGroup, ModalBody, Modal, Form, Input, Label, Button, ModalHeader, ModalFooter } from 'reactstrap';
+
 
 const FoodEdit = (props) => {
     const [editDate, setEditDate] = useState(props.foodToUpdate.date);
@@ -53,7 +54,7 @@ const FoodEdit = (props) => {
                         <Label htmlFor='photo'>Edit Photo:</Label>
                         <Input name='photo' value={editPhoto} onChange={(e) => setEditPhoto(e.target.value)}/>
                     </FormGroup>
-                    <Button type='submit'>Update the food entry</Button>
+                    <Button type='submit'>Update food entry</Button>
                 </Form>
             </ModalBody>
         </Modal>
