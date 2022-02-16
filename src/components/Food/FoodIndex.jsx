@@ -10,6 +10,7 @@ const FoodIndex = (props) => {
   const [refreshFoodTable, setRefreshFoodTable] = useState(true);
   const [foodToUpdate, setFoodToUpdate] = useState({});
   const [isTableVisible, setIsTableVisible] = useState(true);
+  const [buttonText, setButtonText] = useState('View your logs');
 
   const fetchFood = () => {
     fetch('http://localhost:4000/foodlog/mine', {
@@ -27,12 +28,11 @@ const FoodIndex = (props) => {
   };
 
   const changeViewBtn = (e) => {
-    e.target.style.background = '#54626F'
-  }
+    e.target.style.background = '#54626F';
+  };
   const changeViewBtnOff = (e) => {
-    e.target.style.background = 'grey'
-  }
-
+    e.target.style.background = 'grey';
+  };
 
   const editUpdateFood = (foodEntry) => {
     setFoodToUpdate(foodEntry);
@@ -53,6 +53,7 @@ const FoodIndex = (props) => {
 
   function handleToggle() {
     setIsTableVisible(!isTableVisible);
+    setButtonText('Create a Log');
   }
 
   return (
@@ -86,8 +87,15 @@ const FoodIndex = (props) => {
       ) : (
         <></>
       )}
-      <div style={{borderWidth: 0, textAlign: "center", marginTop: 10}}>
-      <Button onMouseEnter={changeViewBtn} onMouseLeave={changeViewBtnOff} classID="viewLogs" onClick={handleToggle}>View Food Logs</Button>
+      <div style={{ borderWidth: 0, textAlign: 'center', marginTop: 10 }}>
+        <Button
+          onMouseEnter={changeViewBtn}
+          onMouseLeave={changeViewBtnOff}
+          classID="viewLogs"
+          onClick={handleToggle}
+        >
+          {buttonText}
+        </Button>
       </div>
     </div>
   );

@@ -47,6 +47,17 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.photoColumn {
+  /* display: inline-block; */
+  white-space: nowrap;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  text-overflow: initial;
+  width: 300px;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
 /*  Footer  */
 .footerImg {
   height: 150px;
@@ -54,8 +65,8 @@ body {
   border-radius: 5;
 }
 
-.nav-link{
-    font-family: 'Roboto', sans-serif;
-    color: #01111f !important;
-    padding: 0
-  }
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  color: #01111f !important;
+  padding: 0;
+}

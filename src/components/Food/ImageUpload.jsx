@@ -24,6 +24,7 @@ const ImageUpload = (props) => {
     console.log(File.secure_url);
     setImage(File.secure_url);
     props.setPhoto(File.secure_url);
+    props.setEditPhoto(File.secure_url);
     setLoading(false);
   };
 
