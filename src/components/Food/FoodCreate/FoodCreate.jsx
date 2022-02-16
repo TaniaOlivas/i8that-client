@@ -43,9 +43,9 @@ const FoodCreate = (props) => {
   };
 
   return (
-    <div>
-      <Container style={{ width: '50%' }}>
-        <h3>Log your food!</h3>
+    <div style={{textAlign: 'center'}}>
+      <Container style={{ width: '30%' }}>
+        <h2>Log Food</h2>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
             <Label htmlFor="date" />

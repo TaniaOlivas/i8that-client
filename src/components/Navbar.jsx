@@ -16,10 +16,10 @@ const Header = (props) => {
   return (
     <div>
       <header>
-        <Navbar color="faded" className="header">
-          <Nav navbar>
+        <Navbar color="faded" className="header" style={{paddingBottom: 0}}>
+          <Nav navbar className='ms-auto'>
             <NavItem>
-              <NavLink onClick={props.clearToken}>Logout</NavLink>
+              <NavLink style={{paddingBottom: 0}} onClick={props.clearToken}>Logout</NavLink>
             </NavItem>
             {/* <Dropdown nav>
               <DropdownToggle caret nav></DropdownToggle>

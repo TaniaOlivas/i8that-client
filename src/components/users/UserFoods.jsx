@@ -19,7 +19,7 @@ const UserFood = (props) => {
   return (
     <div style={{textAlign: 'center'}}>
       <Container style={{width: '50%'}}>
-      <h1>Patient Entries</h1>
+      <h2>Patient Entries</h2>
       <Table hover style={{backgroundColor: 'white', borderRadius: 20 }}>
         <thead>
           <tr>

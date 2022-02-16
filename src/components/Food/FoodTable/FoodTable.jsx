@@ -82,6 +82,7 @@ const FoodTable = (props) => {
   };
 
   return (
+    
     <div style={{ textAlign: 'center' }}>
       <Container style={{ width: '50%' }}>
         <div>

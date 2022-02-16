@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Login from './Login';
 import Signup from './Signup';
+import {Button} from 'reactstrap';
 
 const Auth = (props) => {
   const [isLoginVisible, setisLoginVisible] = useState(true);
@@ -11,7 +12,6 @@ const Auth = (props) => {
 
   return (
     <div>
-      <h1>Hello from Signup/Login</h1>
       {isLoginVisible === true ? (
         <Login
           updateLocalStorage={props.updateLocalStorage}
@@ -26,7 +26,9 @@ const Auth = (props) => {
         />
       )}
       <br />
-      <button onClick={handleToggle}>Toggle Signup/Login</button>
+      <div style={{textAlign: 'center'}}>
+      <Button onClick={handleToggle}>Signup/Login</Button>
+      </div>
     </div>
   );
 };

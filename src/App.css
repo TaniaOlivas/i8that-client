@@ -2,7 +2,7 @@
 .header {
   margin-top: 0px !important;
   text-align: center;
-  background-color: white;
+  background: transparent;
   color: #28446d;
 }
 
@@ -29,7 +29,7 @@ header button {
 }
 
 .secondHeader {
-  background-color: #f99f3e;
+  background: transparent;
 }
 
 /*  Body  */
@@ -53,3 +53,9 @@ body {
   width: 150px;
   border-radius: 5;
 }
+
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    color: #01111f !important;
+    padding: 0
+  }
