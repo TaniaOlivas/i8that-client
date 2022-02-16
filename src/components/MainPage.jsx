@@ -1,20 +1,29 @@
 import React from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link, NavLink } from 'react-router-dom';
 import FoodIndex from './Food/FoodIndex';
 import UserIndex from './users/UserIndex';
-import fruitImage from '../assets/fruitphoto.jpg';
-import { Button } from 'reactstrap';
+import { Button, Nav, Navbar, NavItem } from 'reactstrap';
 
 const MainPage = (props) => {
   return (
-    <div className="backgroundMain">
-      <div>
+    <div>
+      <header className="secondHeader">
+        <Navbar>
+          <Nav>
+            <NavItem>
+              <NavLink to="/FoodIndex">Log your Food!</NavLink>
+              <NavLink to="/users">Admin Only</NavLink>
+            </NavItem>
+          </Nav>
+        </Navbar>
+      </header>
+      {/* <div>
         <Button>
           <Link to="/FoodIndex">Log your Food!</Link>
         </Button>{' '}
         <Link to="/users">Admin Only</Link>
-      </div>
-      <div>
+      </div> */}
+      <div className="backgroundMain">
         <Routes>
           <Route
             exact

@@ -107,7 +107,7 @@ const FoodCreate = (props) => {
                 value={mood}
                 onClick={(e) => setMood(e.target.value)}
               >
-                {tired}
+                <option value="Tired">{tired}</option>
               </Button>{' '}
               <Button
                 color="warning"
