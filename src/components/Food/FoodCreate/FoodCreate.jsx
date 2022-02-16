@@ -1,8 +1,24 @@
 import React, { useState } from 'react';
-import { Button, Form, FormGroup, Input, Label, Container } from 'reactstrap';
+import {
+  Button,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Container,
+  ButtonGroup,
+  ButtonToolbar,
+} from 'reactstrap';
 import ImageUpload from '../ImageUpload';
+import emoji from 'emoji-dictionary';
 
 const FoodCreate = (props) => {
+  const happy = emoji.getUnicode('grinning');
+  const sad = emoji.getUnicode('pensive');
+  const tired = emoji.getUnicode('hot');
+  const energized = emoji.getUnicode('zany');
+  const neutral = emoji.getUnicode('expressionless');
+
   const [date, setDate] = useState('');
   const [food, setFood] = useState('');
   const [location, setLocation] = useState('');
@@ -37,7 +53,7 @@ const FoodCreate = (props) => {
 
   return (
     <div>
-      <Container>
+      <Container style={{ width: '50%' }}>
         <h3>Log your food!</h3>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
@@ -71,8 +87,70 @@ const FoodCreate = (props) => {
             />
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="mood" />
+            <Label htmlFor="calories" />
             <Input
+              type="text"
+              name="calories"
+              placeholder="Calories"
+              value={calories}
+              onChange={(e) => setCalories(e.target.value)}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label htmlFor="mood"></Label>
+            <br />
+            <div style={{ textAlign: 'center' }}>
+              <Button
+                color="warning"
+                outline
+                style={{ textAlign: 'center', width: '19%' }}
+                value={mood}
+                onClick={(e) => setMood(e.target.value)}
+              >
+                {tired}
+              </Button>{' '}
+              <Button
+                color="warning"
+                outline
+                style={{ textAlign: 'center', width: '19%' }}
+              >
+                {sad}
+              </Button>{' '}
+              <Button
+                color="warning"
+                outline
+                style={{ textAlign: 'center', width: '19%' }}
+              >
+                {neutral}
+              </Button>{' '}
+              <Button
+                color="warning"
+                outline
+                style={{ textAlign: 'center', width: '19%' }}
+              >
+                {energized}
+              </Button>{' '}
+              <Button
+                color="warning"
+                outline
+                style={{ textAlign: 'center', width: '19%' }}
+              >
+                {happy}
+              </Button>
+              {/* <Label htmlFor="mood" />
+            <Input
+              type="button"
+              name="mood"
+              value="Mood"
+              onChange={(e) => setMood(e.target.value)}
+            ></Input>
+            <Input
+              type="button"
+              name="mood"
+              value={happy}
+              onChange={(e) => setMood(e.target.value)}
+            ></Input> */}
+              {/* <Input
               type="select"
               name="mood"
               placeholder="Mood"
@@ -84,20 +162,20 @@ const FoodCreate = (props) => {
               <option value="Indifferent">Indifferent</option>
               <option value="Tired">Tired</option>
               <option value="Energized">Energized</option>
-            </Input>
+            </Input> */}
+            </div>
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="calories" />
-            <Input
-              type="text"
-              name="calories"
-              placeholder="Calories"
-              value={calories}
-              onChange={(e) => setCalories(e.target.value)}
+            <Label htmlFor="photo" />
+            <ImageUpload
+              token={props.token}
+              setPhoto={setPhoto}
+              photo={photo}
             />
           </FormGroup>
-          <ImageUpload token={props.token} setPhoto={setPhoto} photo={photo} />
-          <Button type="submit">Submit</Button>
+          <FormGroup style={{ textAlign: 'center' }}>
+            <Button type="submit">Submit</Button>
+          </FormGroup>
         </Form>
       </Container>
     </div>

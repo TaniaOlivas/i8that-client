@@ -1,0 +1,27 @@
+.header {
+  margin-top: 0px !important;
+  text-align: center;
+  background-color: #f99f3e;
+  color: #28446d;
+}
+.picture {
+  background: url(./assets/background.jpeg) center 0px;
+  height: 150px;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+}
+
+header h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #f99f3e;
+  font-size: 5.5em;
+  margin: 0;
+  text-shadow: 1px 2px 0 #28446d;
+  text-align: center;
+}
+
+header button {
+  color: white;
+}
