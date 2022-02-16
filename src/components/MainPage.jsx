@@ -3,14 +3,10 @@ import { Route, Routes, Link } from 'react-router-dom';
 import FoodIndex from './Food/FoodIndex';
 import UserIndex from './users/UserIndex';
 import fruitImage from "../assets/fruitphoto.jpg"
-import '../App.css';
-
-
-
 
 const MainPage = (props) => {
   return (
-    <div>    
+    <div>
       <div>
         <Link to="/FoodIndex">Log your Food!</Link>{' '}
         <Link to="/users">Admin Only</Link>
