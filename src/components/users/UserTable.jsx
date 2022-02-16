@@ -37,9 +37,9 @@ const UserTable = (props) => {
   };
 
   return (
-    <div>
+    <div style={{textAlign: 'center'}}>
       <h1>Users:</h1>
-      <Table>
+      <Table hover>
         <thead>
           <tr>
             <th>#</th>
