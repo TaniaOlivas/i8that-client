@@ -5,6 +5,7 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import logo from "../assets/orangelogolight.png"
 
 const Header = (props) => {
   return (
@@ -15,6 +16,7 @@ const Header = (props) => {
             <NavItem>
               <NavLink style={{paddingBottom: 0}} onClick={props.clearToken}>Logout</NavLink>
             </NavItem>
+            <img src= { logo } style={{ width: "70%", height: "70%"}} />
             {/* <Dropdown nav>
               <DropdownToggle caret nav></DropdownToggle>
               <DropdownMenu>
@@ -22,6 +24,7 @@ const Header = (props) => {
               </DropdownMenu>
             </Dropdown> */}
           </Nav>
+
         </Navbar>
       </header>
     </div>
