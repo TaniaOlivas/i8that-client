@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-  Container,
-  ButtonGroup,
-  ButtonToolbar,
-} from 'reactstrap';
+import { Button, Form, FormGroup, Input, Label, Container } from 'reactstrap';
 import ImageUpload from '../ImageUpload';
 import emoji from 'emoji-dictionary';
 
@@ -96,77 +87,69 @@ const FoodCreate = (props) => {
               onChange={(e) => setCalories(e.target.value)}
             />
           </FormGroup>
-          <FormGroup>
-            <Label htmlFor="mood"></Label>
-            <br />
-            <div style={{ textAlign: 'center' }}>
-              <Button
-                color="warning"
-                outline
-                style={{ textAlign: 'center', width: '19%' }}
-                value={mood}
-                onClick={(e) => setMood(e.target.value)}
-              >
-                <option value="Tired">{tired}</option>
-              </Button>{' '}
-              <Button
-                color="warning"
-                outline
-                style={{ textAlign: 'center', width: '19%' }}
-              >
-                {sad}
-              </Button>{' '}
-              <Button
-                color="warning"
-                outline
-                style={{ textAlign: 'center', width: '19%' }}
-              >
-                {neutral}
-              </Button>{' '}
-              <Button
-                color="warning"
-                outline
-                style={{ textAlign: 'center', width: '19%' }}
-              >
-                {energized}
-              </Button>{' '}
-              <Button
-                color="warning"
-                outline
-                style={{ textAlign: 'center', width: '19%' }}
-              >
+          <FormGroup tag="fieldset" style={{ textAlign: 'center' }}>
+            <FormGroup inline check>
+              <Input
+                type="radio"
+                name="emoji"
+                value="Happy"
+                onChange={(e) => setMood(e.target.value)}
+                style={{ margin: '0px' }}
+              />
+              <Label check htmlFor="mood" style={{ zoom: '3', margin: '0px' }}>
                 {happy}
-              </Button>
-              {/* <Label htmlFor="mood" />
-            <Input
-              type="button"
-              name="mood"
-              value="Mood"
-              onChange={(e) => setMood(e.target.value)}
-            ></Input>
-            <Input
-              type="button"
-              name="mood"
-              value={happy}
-              onChange={(e) => setMood(e.target.value)}
-            ></Input> */}
-              {/* <Input
-              type="select"
-              name="mood"
-              placeholder="Mood"
-              value={mood}
-              onChange={(e) => setMood(e.target.value)}
-            >
-              <option value="Happy">Happy</option>
-              <option value="Sad">Sad</option>
-              <option value="Indifferent">Indifferent</option>
-              <option value="Tired">Tired</option>
-              <option value="Energized">Energized</option>
-            </Input> */}
-            </div>
+              </Label>
+            </FormGroup>
+            <FormGroup check inline>
+              <Input
+                type="radio"
+                name="emoji"
+                value="Sad"
+                onChange={(e) => setMood(e.target.value)}
+                style={{ margin: '0px' }}
+              />
+              <Label check htmlFor="mood" style={{ zoom: '3', margin: '0px' }}>
+                {sad}
+              </Label>
+            </FormGroup>
+            <FormGroup check inline>
+              <Input
+                type="radio"
+                name="emoji"
+                value="Tired"
+                onChange={(e) => setMood(e.target.value)}
+                style={{ margin: '0px' }}
+              />
+              <Label check htmlFor="mood" style={{ zoom: '3', margin: '0px' }}>
+                {tired}
+              </Label>
+            </FormGroup>
+            <FormGroup check inline>
+              <Input
+                type="radio"
+                name="emoji"
+                value="Energized"
+                onChange={(e) => setMood(e.target.value)}
+                style={{ margin: '0px' }}
+              />
+              <Label check htmlFor="mood" style={{ zoom: '3', margin: '0px' }}>
+                {energized}
+              </Label>
+            </FormGroup>
+            <FormGroup check inline>
+              <Input
+                type="radio"
+                name="emoji"
+                value="Neutral"
+                onChange={(e) => setMood(e.target.value)}
+                style={{ margin: '0px' }}
+              />
+              <Label check htmlFor="mood" style={{ zoom: '3', margin: '0px' }}>
+                {neutral}
+              </Label>
+            </FormGroup>
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="photo" />
             <ImageUpload
               token={props.token}
               setPhoto={setPhoto}
