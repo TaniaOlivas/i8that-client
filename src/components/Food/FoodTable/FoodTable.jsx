@@ -69,7 +69,8 @@ const FoodTable = (props) => {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <Container><h1>Food Entries</h1>
+      <Container><div><h1>Food Entries</h1></div>
+      <div>
       <Table hover>
         <thead >
           <tr className='FoodTable'>
@@ -83,6 +84,7 @@ const FoodTable = (props) => {
         </thead>
         <tbody>{foodTableMapper()}</tbody>
       </Table>
+      </div>
       </Container>
     </div>
   );
