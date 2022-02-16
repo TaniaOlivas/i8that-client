@@ -63,3 +63,8 @@ body {
     color: #01111f !important;
     padding: 0
   }
+
+.footer{
+    height: 20vh;
+    border-top: 0;
+}

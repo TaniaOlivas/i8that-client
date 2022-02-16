@@ -14,11 +14,11 @@ const Footer = () => {
     return(
         <footer className='footer'>
             <Row>
-                <div style={{textAlign: "center", marginTop: 20}}>
+                <div style={{textAlign: "center", marginTop: 4}}>
+                <img src={orangeGuitar} className="footerImg" alt="Orange with guitar" />
                 <img src={orangeBarbell} className="footerImg" alt="Orange with barbell" />
                 <img src={orangeBoxing} className="footerImg" alt="Orange boxing" />
                 <img src={orangeDumbbell} className="footerImg" alt="Orange with dumbbells" />
-                <img src={orangeGuitar} className="footerImg" alt="Orange with guitar" />
                 <img src={orangeHeadset} className="footerImg" alt="Orange with headset" />
                 <img src={orangeJuice} className="footerImg" alt="Orange holding juice" />
                 <img src={orangeSmile} className="footerImg" alt="Smiling orange" />
