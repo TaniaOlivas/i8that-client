@@ -43,7 +43,9 @@ const UserIndex = (props) => {
           setFoodEntrys={setFoodEntrys}
         />
       )}
+      <div style={{textAlign: 'center'}}>
       <Button onClick={handleToggle}>View all Users Logs</Button>
+      </div>
     </div>
   );
 };
