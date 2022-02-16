@@ -11,7 +11,7 @@ const MainPage = (props) => {
       <header className="secondHeader">
         <Navbar style={{paddingTop: 0, marginLeft: "20px"}} >
         <div>
-            <img src={logo} style={{ width: "70%", height: "70%"}} />
+            <img src={logo} style={{ width: "120px", height: "60px", paddingTop: 0, margin: -12}} />
             </div>
           <Nav navbar className='ms-auto' style={{textAlign: 'right'}}>
             <NavItem>
