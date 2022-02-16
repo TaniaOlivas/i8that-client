@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import {Form, FormGroup, Label, Input, Button, Container} from 'reactstrap';
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -22,7 +22,8 @@ const Login = (props) => {
 
     return (
         <div>
-            <h1>Login</h1>
+            <Container style={{width: '25%'}}>
+            <h1 style={{textAlign: 'center'}}>Login</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label htmlFor='email'>Email</Label>
@@ -34,8 +35,11 @@ const Login = (props) => {
                     <Input onChange={(e) => setPassword(e.target.value)}
                     name='password' type='password' value={password} />
                 </FormGroup>
+                <div style={{textAlign: 'center'}}>
                 <Button type='submit'>Login</Button>
+                </div>
             </Form>
+            </Container>
         </div>
     );
 }

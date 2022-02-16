@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Container } from 'reactstrap';
 
 const Signup = (props) => {
   const [name, setName] = useState('');
@@ -30,7 +30,8 @@ const Signup = (props) => {
 
   return (
     <div>
-      <h1>Sign Up</h1>
+      <Container style={{width: '25%'}}>
+      <h1 style={{textAlign: 'center'}}>Sign Up</h1>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="name">Name</Label>
@@ -70,8 +71,11 @@ const Signup = (props) => {
             minLength="5"
           />
         </FormGroup>
+        <div style={{textAlign: 'center'}}>
         <Button type="submit">Sign Up</Button>
+        </div>
       </Form>
+      </Container>
     </div>
   );
 };

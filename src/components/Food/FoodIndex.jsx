@@ -86,7 +86,7 @@ const FoodIndex = (props) => {
       ) : (
         <></>
       )}
-      <div style={{borderWidth: 0, textAlign: "center", marginTop: 50}}>
+      <div style={{borderWidth: 0, textAlign: "center", marginTop: 10}}>
       <Button onMouseEnter={changeViewBtn} onMouseLeave={changeViewBtnOff} classID="viewLogs" onClick={handleToggle}>View Food Logs</Button>
       </div>
     </div>
