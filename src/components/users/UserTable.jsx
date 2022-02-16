@@ -39,7 +39,7 @@ const UserTable = (props) => {
   return (
     <div style={{textAlign: 'center'}}>
       <Container style={{width: '50%'}}>
-      <h1>Users</h1>
+      <h1>Patients</h1>
       <Table hover style={{backgroundColor: 'white', borderRadius: 20}}>
         <thead>
           <tr>

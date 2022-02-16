@@ -44,7 +44,7 @@ const UserIndex = (props) => {
         />
       )}
       <div style={{textAlign: 'center'}}>
-      <Button onClick={handleToggle}>View all Users Logs</Button>
+      <Button onClick={handleToggle}>View All Patient Logs</Button>
       </div>
     </div>
   );
