@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table } from 'reactstrap';
+import { Container, Table } from 'reactstrap';
 
 const UserTable = (props) => {
   const [users, setUsers] = useState([]);
@@ -37,9 +37,10 @@ const UserTable = (props) => {
   };
 
   return (
-    <div>
-      <h1>Users:</h1>
-      <Table>
+    <div style={{textAlign: 'center'}}>
+      <Container style={{width: '50%'}}>
+      <h1>Users</h1>
+      <Table hover style={{backgroundColor: 'white', borderRadius: 20}}>
         <thead>
           <tr>
             <th>#</th>
@@ -50,6 +51,7 @@ const UserTable = (props) => {
         </thead>
         <tbody>{userMapper()}</tbody>
       </Table>
+      </Container>
     </div>
   );
 };

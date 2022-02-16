@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'reactstrap';
+import { Container, Table } from 'reactstrap';
 
 const UserFood = (props) => {
   const foodTableMapper = () => {
@@ -17,10 +17,10 @@ const UserFood = (props) => {
     });
   };
   return (
-    <div>
+    <div style={{textAlign: 'center'}}>
+      <Container style={{width: '50%'}}>
       <h1>Hello from FoodTable</h1>
-      <hr />
-      <Table striped>
+      <Table hover style={{backgroundColor: 'white', borderRadius: 20 }}>
         <thead>
           <tr>
             <th>Date</th>
@@ -33,6 +33,7 @@ const UserFood = (props) => {
         </thead>
         <tbody>{foodTableMapper()}</tbody>
       </Table>
+      </Container>
     </div>
   );
 };
