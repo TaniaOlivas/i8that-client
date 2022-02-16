@@ -33,6 +33,7 @@ const FoodIndex = (props) => {
     e.target.style.background = 'grey'
   }
 
+
   const editUpdateFood = (foodEntry) => {
     setFoodToUpdate(foodEntry);
     console.log(foodEntry);

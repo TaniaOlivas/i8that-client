@@ -40,6 +40,7 @@ const FoodTable = (props) => {
           <td>{foodEntry.calories}</td>
           <td>{foodEntry.photo}</td>
           <td>
+      
             <Button 
             style={{justifyContent: 'center', borderWidth: 0, textAlign: "center", alignItems: 'center', marginRight:50, width: 100, backgroundColor: '#86b13d'}}
               onClick={() => {
@@ -68,6 +69,7 @@ const FoodTable = (props) => {
   };
 
   return (
+
     <div style={{textAlign: 'center'}}>
       <Container><div><h1>Food Entries</h1></div>
       <div>
