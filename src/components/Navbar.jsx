@@ -5,18 +5,16 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-import logo from "../assets/orangelogolight.png"
 
 const Header = (props) => {
   return (
-    <div className='topNav'>
-      <header>
-        <Navbar color="faded" className="header" style={{paddingBottom: 0}}>
+    <>
+
+        <Navbar className="navbar-light" style={{paddingBottom: 0, backgroundColor: "transparent", marginLeft: 20, paddinLeft: 20}}>
           <Nav navbar className='ms-auto'>
             <NavItem>
               <NavLink style={{paddingBottom: 0}} onClick={props.clearToken}>Logout</NavLink>
             </NavItem>
-            <img src= { logo } style={{ width: "70%", height: "70%"}} />
             {/* <Dropdown nav>
               <DropdownToggle caret nav></DropdownToggle>
               <DropdownMenu>
@@ -24,10 +22,9 @@ const Header = (props) => {
               </DropdownMenu>
             </Dropdown> */}
           </Nav>
-
         </Navbar>
-      </header>
-    </div>
+      {/* //</div></header> */}
+  </>
   );
 };
 

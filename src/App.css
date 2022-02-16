@@ -1,9 +1,13 @@
 /* Header */
-.header {
+/* header {
   margin-top: 0px !important;
   text-align: center;
-  background: transparent;
+  background-color: transparent !important;
   color: #28446d;
+} */
+
+.nav{
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .picture {
