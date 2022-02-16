@@ -1,7 +1,8 @@
-import React from 'react';
-import { Table, Button } from 'reactstrap';
+import React, { useState } from 'react';
+import { Table, Button, Container } from 'reactstrap';
 
 const FoodTable = (props) => {
+
   const deleteFoodEntry = (foodEntry) => {
     fetch(`http://localhost:4000/foodlog/${foodEntry.id}`, {
       method: 'DELETE',
@@ -11,6 +12,22 @@ const FoodTable = (props) => {
       }),
     }).then(() => props.fetchFood());
   };
+
+  const changeEditBtn = (e) => {
+    e.target.style.background = '#006400';
+  } 
+
+  const changeEditBtnOff = (e) => {
+    e.target.style.background = '#86b13d';
+  }
+
+  const changeDeleteBtn = (e) => {
+    e.target.style.background = '#e86100';
+  }
+
+  const changeDeleteBtnOff = (e) => {
+    e.target.style.background = '#fe9233';
+  }
 
   const foodTableMapper = () => {
     return props.foodEntrys.map((foodEntry, index) => {
@@ -23,23 +40,28 @@ const FoodTable = (props) => {
           <td>{foodEntry.calories}</td>
           <td>{foodEntry.photo}</td>
           <td>
-            <Button
-              onClick={() => {
-                deleteFoodEntry(foodEntry);
-              }}
-            >
-              Delete
-            </Button>{' '}
-          </td>
-          <td>
-            <Button
+      
+            <Button 
+            style={{justifyContent: 'center', borderWidth: 0, textAlign: "center", alignItems: 'center', marginRight:50, width: 100, backgroundColor: '#86b13d'}}
               onClick={() => {
                 props.editUpdateFood(foodEntry);
                 props.updateOn();
-              }}
-            >
+              }} 
+              onMouseEnter={changeEditBtn}
+              onMouseLeave={changeEditBtnOff}>
               Edit
             </Button>
+          </td>
+          <td>
+            <Button style={{borderWidth: 0, textAlign: "center", width: 100, backgroundColor: '#fe9233'}}
+              onClick={() => {
+                deleteFoodEntry(foodEntry);
+              }}
+              onMouseEnter={changeDeleteBtn}
+              onMouseLeave={changeDeleteBtnOff}
+            >
+              Delete
+            </Button>{' '}
           </td>
         </tr>
       );
@@ -47,12 +69,12 @@ const FoodTable = (props) => {
   };
 
   return (
-    <div>
-      <h1>Hello from FoodTable</h1>
-      <hr />
-      <Table striped>
-        <thead>
-          <tr>
+
+    <div style={{textAlign: 'center'}}>
+      <Container><h1>Food Entries</h1>
+      <Table hover>
+        <thead >
+          <tr className='FoodTable'>
             <th>Date</th>
             <th>Food</th>
             <th>Location</th>
@@ -63,6 +85,7 @@ const FoodTable = (props) => {
         </thead>
         <tbody>{foodTableMapper()}</tbody>
       </Table>
+      </Container>
     </div>
   );
 };

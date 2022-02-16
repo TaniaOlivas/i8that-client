@@ -4,6 +4,7 @@ import './App.css';
 import Auth from './components/auth/Auth';
 import Header from './components/Navbar';
 import MainPage from './components/MainPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -51,6 +52,7 @@ function App() {
         />
         {protectedViews()}
         {/* <FoodIndex token={sessionToken} /> */}
+        <Footer/>
       </Router>
     </div>
   );
