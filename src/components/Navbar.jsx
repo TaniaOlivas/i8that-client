@@ -19,7 +19,7 @@ const Header = (props) => {
       <header>
         <Navbar color="faded" className="header">
           <Nav navbar>
-            <NavItem className='navitemlink'>
+            <NavItem>
               <NavLink onClick={props.clearToken}>Logout</NavLink>
             </NavItem>
             <img src= { logo } style={{ width: "70%", height: "70%"}} />
