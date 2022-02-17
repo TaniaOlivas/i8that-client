@@ -32,12 +32,14 @@ const FoodTable = (props) => {
     return props.foodEntrys.map((foodEntry, index) => {
       return (
         <tr key={index}>
-          <td>{foodEntry.date}</td>
-          <td>{foodEntry.food}</td>
-          <td>{foodEntry.location}</td>
-          <td>{foodEntry.mood}</td>
-          <td>{foodEntry.calories}</td>
-          <td>{foodEntry.photo}</td>
+          <td className="photoColumn">{foodEntry.date}</td>
+          <td className="photoColumn">{foodEntry.food}</td>
+          <td className="photoColumn">{foodEntry.location}</td>
+          <td className="photoColumn">{foodEntry.calories}</td>
+          <td className="photoColumn">{foodEntry.mood}</td>
+          <td>
+            <img src={foodEntry.photo} alt="" style={{ width: '100%' }} />
+          </td>
           <td>
             <Button
               style={{
@@ -82,7 +84,6 @@ const FoodTable = (props) => {
   };
 
   return (
-    
     <div style={{ textAlign: 'center' }}>
       <Container style={{ width: '50%' }}>
         <div>
@@ -95,8 +96,8 @@ const FoodTable = (props) => {
                 <th>Date</th>
                 <th>Food</th>
                 <th>Location</th>
-                <th>Mood</th>
                 <th>Calories</th>
+                <th>Mood</th>
                 <th>Photo</th>
               </tr>
             </thead>

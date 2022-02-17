@@ -51,6 +51,17 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.photoColumn {
+  /* display: inline-block; */
+  white-space: nowrap;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  text-overflow: initial;
+  width: 300px;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
 /*  Footer  */
 .footerImg {
   height: 150px;
@@ -67,4 +78,3 @@ body {
 .footer{
     height: 20vh;
     border-top: 0;
-}

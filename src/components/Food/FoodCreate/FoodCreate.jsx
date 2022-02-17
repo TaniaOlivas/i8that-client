@@ -16,6 +16,7 @@ const FoodCreate = (props) => {
   const [mood, setMood] = useState('');
   const [calories, setCalories] = useState('');
   const [photo, setPhoto] = useState('');
+  const [editPhoto, setEditPhoto] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,7 +52,7 @@ const FoodCreate = (props) => {
 
 
   return (
-    <div style={{textAlign: 'center'}}>
+    <div style={{ textAlign: 'center' }}>
       <Container style={{ width: '41%' }}>
         <h2>Log Food</h2>
         <Form onSubmit={handleSubmit}>
@@ -161,7 +162,7 @@ const FoodCreate = (props) => {
             <ImageUpload
               token={props.token}
               setPhoto={setPhoto}
-              photo={photo}
+              setEditPhoto={setEditPhoto}
             />
           </FormGroup>
           <FormGroup style={{ textAlign: 'center' }}>
