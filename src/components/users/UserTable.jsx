@@ -37,20 +37,20 @@ const UserTable = (props) => {
   };
 
   return (
-    <div style={{textAlign: 'center'}}>
-      <Container style={{width: '50%'}}>
-      <h2>Patients</h2>
-      <Table hover style={{backgroundColor: 'white', borderRadius: 20}}>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Birthday</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>{userMapper()}</tbody>
-      </Table>
+    <div style={{ textAlign: 'center' }}>
+      <Container style={{ width: '50%' }}>
+        <h2>Patients</h2>
+        <Table hover style={{ backgroundColor: 'white', borderRadius: 20 }}>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Birthday</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>{userMapper()}</tbody>
+        </Table>
       </Container>
     </div>
   );

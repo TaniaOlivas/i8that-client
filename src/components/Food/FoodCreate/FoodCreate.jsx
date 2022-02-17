@@ -13,10 +13,10 @@ const FoodCreate = (props) => {
   const [date, setDate] = useState('');
   const [food, setFood] = useState('');
   const [location, setLocation] = useState('');
-  const [mood, setMood] = useState('');
   const [calories, setCalories] = useState('');
+  const [mood, setMood] = useState('');
   const [photo, setPhoto] = useState('');
-  const [editPhoto, setEditPhoto] = useState([]);
+  const [editPhoto, setEditPhoto] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,6 +39,13 @@ const FoodCreate = (props) => {
       .then((data) => {
         console.log(data);
         props.setRefreshFoodTable(!props.refreshFoodTable);
+        alert('Log Created!');
+        setDate('');
+        setFood('');
+        setLocation('');
+        setCalories('');
+        setMood(null);
+        setPhoto(null);
       })
       .catch((err) => console.error(err));
   };
@@ -54,7 +61,7 @@ const FoodCreate = (props) => {
   return (
     <div style={{ textAlign: 'center' }}>
       <Container style={{ width: '41%' }}>
-        <h2>Log Food</h2>
+        <h2 style={{ textAlign: 'center' }}>Log Food</h2>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
             <Label htmlFor="date" />
@@ -96,7 +103,8 @@ const FoodCreate = (props) => {
               onChange={(e) => setCalories(e.target.value)}
             />
           </FormGroup>
-          <FormGroup tag="fieldset" style={{ textAlign: 'center' }}>
+          <FormGroup tag="fieldset">
+            <FormGroup>Mood</FormGroup>
             <FormGroup inline check>
               <Input
                 type="radio"

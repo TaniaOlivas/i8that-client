@@ -7,6 +7,7 @@ import UserTable from './UserTable';
 const UserIndex = (props) => {
   const [foodEntrys, setFoodEntrys] = useState([]);
   const [isTableVisible, setIsTableVisible] = useState(true);
+  const [isOff, setIsOff] = useState(true);
 
   const fetchFood = () => {
     fetch('http://localhost:4000/foodlog/all', {
@@ -29,6 +30,7 @@ const UserIndex = (props) => {
 
   function handleToggle() {
     setIsTableVisible(!isTableVisible);
+    setIsOff(!isOff);
   }
 
   return (
@@ -43,9 +45,13 @@ const UserIndex = (props) => {
           setFoodEntrys={setFoodEntrys}
         />
       )}
-      <div style={{textAlign: 'center'}}>
-      <Button onClick={handleToggle}>View All Patient Logs</Button>
+      <div style={{ borderWidth: 0, textAlign: 'center', marginTop: 10 }}>
+        <Button onClick={handleToggle}>
+          {isOff ? 'View All Patient Logs' : 'View all Patients'}
+        </Button>
       </div>
+      <br />
+      <br />
     </div>
   );
 };
