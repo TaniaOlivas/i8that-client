@@ -10,7 +10,7 @@ const FoodIndex = (props) => {
   const [refreshFoodTable, setRefreshFoodTable] = useState(true);
   const [foodToUpdate, setFoodToUpdate] = useState({});
   const [isTableVisible, setIsTableVisible] = useState(true);
-  const [buttonText, setButtonText] = useState('View your logs');
+  const [isOff, setIsOff] = useState(true);
 
   const fetchFood = () => {
     fetch('http://localhost:4000/foodlog/mine', {
@@ -53,7 +53,7 @@ const FoodIndex = (props) => {
 
   function handleToggle() {
     setIsTableVisible(!isTableVisible);
-    setButtonText('Create a Log');
+    setIsOff(!isOff);
   }
 
   return (
@@ -87,14 +87,21 @@ const FoodIndex = (props) => {
       ) : (
         <></>
       )}
-      <div style={{ borderWidth: 0, textAlign: 'center', marginTop: 10 }}>
+      <div
+        style={{
+          borderWidth: 0,
+          textAlign: 'center',
+          marginTop: 10,
+        }}
+      >
         <Button
           onMouseEnter={changeViewBtn}
           onMouseLeave={changeViewBtnOff}
           classID="viewLogs"
           onClick={handleToggle}
+          style={{ marginBottom: '100px' }}
         >
-          {buttonText}
+          {isOff ? 'View Your Logs' : 'Create a Log'}
         </Button>
       </div>
     </div>

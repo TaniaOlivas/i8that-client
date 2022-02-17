@@ -52,8 +52,8 @@ function App() {
         />
         {protectedViews()}
         {/* <FoodIndex token={sessionToken} /> */}
-        <Footer/>
       </Router>
+      <Footer />
     </div>
   );
 }

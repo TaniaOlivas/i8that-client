@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Login from './Login';
 import Signup from './Signup';
-import {Button} from 'reactstrap';
+import { Button } from 'reactstrap';
 
 const Auth = (props) => {
   const [isLoginVisible, setisLoginVisible] = useState(true);
@@ -26,9 +26,16 @@ const Auth = (props) => {
         />
       )}
       <br />
-      <div style={{textAlign: 'center'}}>
-      <Button onClick={handleToggle}>Signup/Login</Button>
+      <div style={{ textAlign: 'center' }}>
+        <Button onClick={handleToggle}>Signup/Login</Button>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

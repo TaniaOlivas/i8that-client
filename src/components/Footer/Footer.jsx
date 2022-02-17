@@ -1,4 +1,4 @@
-import {Row} from 'reactstrap';
+import { Row, Container } from 'reactstrap';
 import '../../App.css';
 import orangeBarbell from '../../assets/orangeBarbell.jpg';
 import orangeBoxing from '../../assets/orangeBoxing.jpg';
@@ -9,24 +9,49 @@ import orangeJuice from '../../assets/orangeJuice.jpg';
 import orangeSmile from '../../assets/orangeSmile.jpg';
 import orangeSurf from '../../assets/orangeSurf.jpg';
 
-
 const Footer = () => {
-    return(
-        <footer className='footer'>
-            <Row>
-                <div style={{textAlign: "center", marginTop: 20}}>
-                <img src={orangeBarbell} className="footerImg" alt="Orange with barbell" />
-                <img src={orangeBoxing} className="footerImg" alt="Orange boxing" />
-                <img src={orangeDumbbell} className="footerImg" alt="Orange with dumbbells" />
-                <img src={orangeGuitar} className="footerImg" alt="Orange with guitar" />
-                <img src={orangeHeadset} className="footerImg" alt="Orange with headset" />
-                <img src={orangeJuice} className="footerImg" alt="Orange holding juice" />
-                <img src={orangeSmile} className="footerImg" alt="Smiling orange" />
-                <img src={orangeSurf} className="footerImg" alt="Orange with surfboard" />
-                </div>
-            </Row>
-        </footer>
-    );
+  return (
+    <footer className="footer">
+      <Container>
+        <Row>
+          <div style={{ textAlign: 'center', marginTop: 20 }}>
+            <img
+              src={orangeBarbell}
+              className="footerImg"
+              alt="Orange with barbell"
+            />{' '}
+            <img src={orangeBoxing} className="footerImg" alt="Orange boxing" />{' '}
+            <img
+              src={orangeDumbbell}
+              className="footerImg"
+              alt="Orange with dumbbells"
+            />{' '}
+            <img
+              src={orangeGuitar}
+              className="footerImg"
+              alt="Orange with guitar"
+            />{' '}
+            <img
+              src={orangeHeadset}
+              className="footerImg"
+              alt="Orange with headset"
+            />{' '}
+            <img
+              src={orangeJuice}
+              className="footerImg"
+              alt="Orange holding juice"
+            />{' '}
+            <img src={orangeSmile} className="footerImg" alt="Smiling orange" />{' '}
+            <img
+              src={orangeSurf}
+              className="footerImg"
+              alt="Orange with surfboard"
+            />
+          </div>
+        </Row>
+      </Container>
+    </footer>
+  );
 };
 
 export default Footer;
