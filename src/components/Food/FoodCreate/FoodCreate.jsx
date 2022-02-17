@@ -50,6 +50,14 @@ const FoodCreate = (props) => {
       .catch((err) => console.error(err));
   };
 
+  const changeViewBtn = (e) => {
+    e.target.style.background = '#54626F'
+  }
+  const changeViewBtnOff = (e) => {
+    e.target.style.background = 'grey'
+  }
+
+
   return (
     <div style={{ textAlign: 'center' }}>
       <Container style={{ width: '41%' }}>
@@ -166,7 +174,7 @@ const FoodCreate = (props) => {
             />
           </FormGroup>
           <FormGroup style={{ textAlign: 'center' }}>
-            <Button type="submit">Submit</Button>
+            <Button onMouseEnter={changeViewBtn} onMouseLeave={changeViewBtnOff}type="submit">Submit</Button>
           </FormGroup>
         </Form>
       </Container>
