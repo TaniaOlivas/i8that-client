@@ -1,17 +1,17 @@
 import React from 'react';
-import { Route, Routes, Link, NavLink } from 'react-router-dom';
+import { Route, Routes, NavLink } from 'react-router-dom';
 import FoodIndex from './Food/FoodIndex';
 import UserIndex from './users/UserIndex';
-import { Button, Nav, Navbar, NavItem } from 'reactstrap';
+import { Nav, Navbar, NavItem } from 'reactstrap';
 import logo from "../assets/orangelogolight.png"
 
 const MainPage = (props) => {
   return (
     <div>
       <header className="secondHeader">
-        <Navbar style={{paddingTop: 0, marginLeft: "20px"}} >
+        <Navbar style={{paddingTop: 0, paddingBottom: 0, marginLeft: "18px"}} >
         <div>
-            <img src={logo} style={{ width: "130px", height: "90px", paddingTop: 0, margin: -12, paddingBottom: 20}} />
+            <img src={logo} style={{ width: "130px", height: "90px", paddingTop: 0, margin: -23, paddingBottom: 20, marginTop: -40}} />
             </div>
           <Nav navbar className='ms-auto' style={{textAlign: 'right'}}>
             <NavItem>

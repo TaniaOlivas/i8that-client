@@ -10,7 +10,7 @@ const Header = (props) => {
   return (
     <>
 
-        <Navbar className="navbar-light" style={{paddingBottom: 0, backgroundColor: "transparent", marginTop: -10, marginLeft: 20, paddinLeft: 20}}>
+        <Navbar className="navbar-light" style={{paddingBottom: 0, backgroundColor: "transparent", marginTop: -15, marginLeft: 250, paddinLeft: 20}}>
           <Nav navbar className='ms-auto'>
             <NavItem>
               <NavLink style={{paddingBottom: 0}} onClick={props.clearToken}>Logout</NavLink>

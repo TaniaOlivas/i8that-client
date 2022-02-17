@@ -69,8 +69,12 @@ body {
   border-radius: 5;
 }
 
-.nav-link {
-  font-family: 'Roboto', sans-serif;
-  color: #01111f !important;
-  padding: 0;
-}
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    color: #01111f !important;
+    padding: 0
+  }
+
+.footer{
+    height: 20vh;
+    border-top: 0;
