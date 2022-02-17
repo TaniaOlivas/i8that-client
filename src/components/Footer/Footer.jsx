@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row>
-          <div style={{ textAlign: 'center', marginTop: 20 }}>
+          <div style={{ textAlign: 'center', marginTop: 0 }}>
             <img
               src={orangeBarbell}
               className="footerImg"
